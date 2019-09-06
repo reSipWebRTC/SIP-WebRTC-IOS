@@ -8,4 +8,9 @@
 
 3 和h5的sip.js等web版sip客户端,Android客户端无缝对接
 
+https://github.com/reSipWebRTC/reSipWebRTC-Web
+
+https://github.com/reSipWebRTC/reSipWebRTC-Android
+
+
 QQ群：220927853
