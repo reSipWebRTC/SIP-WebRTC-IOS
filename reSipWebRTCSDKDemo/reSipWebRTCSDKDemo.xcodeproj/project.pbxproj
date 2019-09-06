@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		634AE591230AE51900D700AF /* ARDCaptureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634AE590230AE51800D700AF /* ARDCaptureController.m */; };
+		634E885522F33A1700D2D22C /* UserSoundsPlayerUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 634E884922F33A1600D2D22C /* UserSoundsPlayerUtil.mm */; };
+		634E885622F33A1700D2D22C /* UIImage+ARDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 634E884A22F33A1600D2D22C /* UIImage+ARDUtilities.m */; };
+		634E885722F33A1700D2D22C /* PBFlatSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 634E885022F33A1700D2D22C /* PBFlatSettings.m */; };
+		634E885822F33A1700D2D22C /* PBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 634E885122F33A1700D2D22C /* PBFlatButton.m */; };
+		634E885922F33A1700D2D22C /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 634E885322F33A1700D2D22C /* CustomButton.m */; };
+		634E885A22F33A1700D2D22C /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 634E885422F33A1700D2D22C /* UIImage+Additions.m */; };
+		634E885D22F33A4400D2D22C /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E885C22F33A4400D2D22C /* libresolv.9.tbd */; };
+		634E885F22F33A5800D2D22C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E885E22F33A5800D2D22C /* AudioToolbox.framework */; };
+		634E886122F33A7200D2D22C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E886022F33A7200D2D22C /* GLKit.framework */; };
+		634E886322F33A8000D2D22C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E886222F33A8000D2D22C /* AVFoundation.framework */; };
+		634E886522F33A9200D2D22C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E886422F33A9200D2D22C /* QuartzCore.framework */; };
+		634E886722F33AA300D2D22C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E886622F33AA300D2D22C /* OpenGLES.framework */; };
+		634E886922F33AAD00D2D22C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E886822F33AAD00D2D22C /* CoreMedia.framework */; };
+		634E886B22F33ABE00D2D22C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E886A22F33ABE00D2D22C /* CFNetwork.framework */; };
+		634E886D22F33ACB00D2D22C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E886C22F33ACB00D2D22C /* CoreGraphics.framework */; };
+		634E886F22F33AD700D2D22C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E886E22F33AD700D2D22C /* Foundation.framework */; };
+		634E887122F33AE400D2D22C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E887022F33AE400D2D22C /* UIKit.framework */; };
+		634E887322F33AF100D2D22C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E887222F33AF100D2D22C /* CoreVideo.framework */; };
+		634E887522F33B0200D2D22C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E887422F33B0100D2D22C /* AssetsLibrary.framework */; };
+		634E887722F33B1C00D2D22C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E887622F33B1C00D2D22C /* SystemConfiguration.framework */; };
+		634E887922F33B2A00D2D22C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E887822F33B2A00D2D22C /* MobileCoreServices.framework */; };
+		634E887B22F33B3600D2D22C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E887A22F33B3600D2D22C /* MessageUI.framework */; };
+		634E887D22F33B4200D2D22C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E887C22F33B4200D2D22C /* CoreFoundation.framework */; };
+		638EE54D22F87A39007533E4 /* ARDSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE54B22F87A39007533E4 /* ARDSettingsViewController.m */; };
+		638EE55022F881D5007533E4 /* RTCVideoCodecInfo+HumanReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE54F22F881D5007533E4 /* RTCVideoCodecInfo+HumanReadable.m */; };
+		63B18BCA2321F6B500F8FFD0 /* reSIProcate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B18BC92321F6B500F8FFD0 /* reSIProcate.framework */; };
+		63B18BCC2321F6BF00F8FFD0 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B18BCB2321F6BE00F8FFD0 /* WebRTC.framework */; };
+		63B18BCE2321F6C600F8FFD0 /* reSIProcate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63B18BC92321F6B500F8FFD0 /* reSIProcate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63B18BD02321F6CB00F8FFD0 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63B18BCB2321F6BE00F8FFD0 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63CA084822F2B442008C678A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA084722F2B442008C678A /* AppDelegate.m */; };
+		63CA084B22F2B442008C678A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA084A22F2B442008C678A /* ViewController.m */; };
+		63CA084E22F2B442008C678A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CA084C22F2B442008C678A /* Main.storyboard */; };
+		63CA085022F2B452008C678A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CA084F22F2B452008C678A /* Assets.xcassets */; };
+		63CA085322F2B452008C678A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CA085122F2B452008C678A /* LaunchScreen.storyboard */; };
+		63CA085622F2B452008C678A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA085522F2B452008C678A /* main.m */; };
+		63CA086022F2B452008C678A /* reSipWebRTCSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA085F22F2B452008C678A /* reSipWebRTCSDKDemoUITests.m */; };
+		63CA08A422F32A09008C678A /* UIImage+ARDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA089222F32A09008C678A /* UIImage+ARDUtilities.m */; };
+		63CA08A522F32A09008C678A /* ARDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA089322F32A09008C678A /* ARDUtilities.m */; };
+		63CA08A722F32A09008C678A /* DDPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA089722F32A09008C678A /* DDPageControl.m */; };
+		63CA08A822F32A09008C678A /* CallingScreenViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CA089922F32A09008C678A /* CallingScreenViewController.mm */; };
+		63CA08A922F32A09008C678A /* ARDStatsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA089C22F32A09008C678A /* ARDStatsView.m */; };
+		63CA08AA22F32A09008C678A /* ARDStatsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08A022F32A09008C678A /* ARDStatsBuilder.m */; };
+		63CA08AB22F32A09008C678A /* ARDVideoCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08A222F32A09008C678A /* ARDVideoCallView.m */; };
+		63CA08AC22F32A09008C678A /* ARDBitrateTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08A322F32A09008C678A /* ARDBitrateTracker.m */; };
+		63CA08C722F32A12008C678A /* SipEngineManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08B022F32A12008C678A /* SipEngineManager.mm */; };
+		63CA08C822F32A12008C678A /* AccountConfig.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08B122F32A12008C678A /* AccountConfig.mm */; };
+		63CA08C922F32A12008C678A /* Account.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08B722F32A12008C678A /* Account.mm */; };
+		63CA08CA22F32A12008C678A /* RegistrationManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08BA22F32A12008C678A /* RegistrationManager.mm */; };
+		63CA08CB22F32A12008C678A /* Call.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08BD22F32A12008C678A /* Call.mm */; };
+		63CA08CC22F32A12008C678A /* CallManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08BE22F32A12008C678A /* CallManager.mm */; };
+		63CA08CD22F32A12008C678A /* SipEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08C022F32A12008C678A /* SipEngine.mm */; };
+		63CA08CE22F32A12008C678A /* CallConfigStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08C122F32A12008C678A /* CallConfigStore.m */; };
+		63CA08CF22F32A12008C678A /* CallConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08C222F32A12008C678A /* CallConfig.m */; };
+		63CA08D022F32A12008C678A /* Commontypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA08C522F32A12008C678A /* Commontypes.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63CA085C22F2B452008C678A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63CA083B22F2B441008C678A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63CA084222F2B442008C678A;
+			remoteInfo = reSipWebRTCSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63CA087F22F2BE77008C678A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				63B18BCE2321F6C600F8FFD0 /* reSIProcate.framework in Embed Frameworks */,
+				63B18BD02321F6CB00F8FFD0 /* WebRTC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		634AE58F230AE51800D700AF /* ARDCaptureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDCaptureController.h; sourceTree = "<group>"; };
+		634AE590230AE51800D700AF /* ARDCaptureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDCaptureController.m; sourceTree = "<group>"; };
+		634E884922F33A1600D2D22C /* UserSoundsPlayerUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UserSoundsPlayerUtil.mm; sourceTree = "<group>"; };
+		634E884A22F33A1600D2D22C /* UIImage+ARDUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ARDUtilities.m"; sourceTree = "<group>"; };
+		634E884B22F33A1600D2D22C /* PBFlatSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBFlatSettings.h; sourceTree = "<group>"; };
+		634E884C22F33A1600D2D22C /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
+		634E884D22F33A1600D2D22C /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		634E884E22F33A1600D2D22C /* PBFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBFlatButton.h; sourceTree = "<group>"; };
+		634E884F22F33A1700D2D22C /* UIImage+ARDUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ARDUtilities.h"; sourceTree = "<group>"; };
+		634E885022F33A1700D2D22C /* PBFlatSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBFlatSettings.m; sourceTree = "<group>"; };
+		634E885122F33A1700D2D22C /* PBFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBFlatButton.m; sourceTree = "<group>"; };
+		634E885222F33A1700D2D22C /* UserSoundsPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSoundsPlayerUtil.h; sourceTree = "<group>"; };
+		634E885322F33A1700D2D22C /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		634E885422F33A1700D2D22C /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
+		634E885C22F33A4400D2D22C /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		634E885E22F33A5800D2D22C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		634E886022F33A7200D2D22C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		634E886222F33A8000D2D22C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		634E886422F33A9200D2D22C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		634E886622F33AA300D2D22C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		634E886822F33AAD00D2D22C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		634E886A22F33ABE00D2D22C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		634E886C22F33ACB00D2D22C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		634E886E22F33AD700D2D22C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		634E887022F33AE400D2D22C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		634E887222F33AF100D2D22C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		634E887422F33B0100D2D22C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		634E887622F33B1C00D2D22C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		634E887822F33B2A00D2D22C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		634E887A22F33B3600D2D22C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		634E887C22F33B4200D2D22C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		638EE54B22F87A39007533E4 /* ARDSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDSettingsViewController.m; sourceTree = "<group>"; };
+		638EE54C22F87A39007533E4 /* ARDSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDSettingsViewController.h; sourceTree = "<group>"; };
+		638EE54E22F881D5007533E4 /* RTCVideoCodecInfo+HumanReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RTCVideoCodecInfo+HumanReadable.h"; sourceTree = "<group>"; };
+		638EE54F22F881D5007533E4 /* RTCVideoCodecInfo+HumanReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RTCVideoCodecInfo+HumanReadable.m"; sourceTree = "<group>"; };
+		63B18BC92321F6B500F8FFD0 /* reSIProcate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = reSIProcate.framework; path = libs/reSIProcate.framework; sourceTree = "<group>"; };
+		63B18BCB2321F6BE00F8FFD0 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = libs/WebRTC.framework; sourceTree = "<group>"; };
+		63CA084322F2B442008C678A /* reSipWebRTCSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reSipWebRTCSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63CA084622F2B442008C678A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		63CA084722F2B442008C678A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		63CA084922F2B442008C678A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		63CA084A22F2B442008C678A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		63CA084D22F2B442008C678A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63CA084F22F2B452008C678A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63CA085222F2B452008C678A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63CA085422F2B452008C678A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63CA085522F2B452008C678A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63CA085B22F2B452008C678A /* reSipWebRTCSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reSipWebRTCSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63CA085F22F2B452008C678A /* reSipWebRTCSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reSipWebRTCSDKDemoUITests.m; sourceTree = "<group>"; };
+		63CA086122F2B452008C678A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63CA089222F32A09008C678A /* UIImage+ARDUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ARDUtilities.m"; sourceTree = "<group>"; };
+		63CA089322F32A09008C678A /* ARDUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDUtilities.m; sourceTree = "<group>"; };
+		63CA089422F32A09008C678A /* ARDStatsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDStatsView.h; sourceTree = "<group>"; };
+		63CA089522F32A09008C678A /* CallingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallingScreenViewController.h; sourceTree = "<group>"; };
+		63CA089722F32A09008C678A /* DDPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPageControl.m; sourceTree = "<group>"; };
+		63CA089822F32A09008C678A /* ARDStatsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDStatsBuilder.h; sourceTree = "<group>"; };
+		63CA089922F32A09008C678A /* CallingScreenViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CallingScreenViewController.mm; sourceTree = "<group>"; };
+		63CA089A22F32A09008C678A /* ARDBitrateTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDBitrateTracker.h; sourceTree = "<group>"; };
+		63CA089B22F32A09008C678A /* ARDVideoCallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDVideoCallView.h; sourceTree = "<group>"; };
+		63CA089C22F32A09008C678A /* ARDStatsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDStatsView.m; sourceTree = "<group>"; };
+		63CA089D22F32A09008C678A /* UIImage+ARDUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ARDUtilities.h"; sourceTree = "<group>"; };
+		63CA089E22F32A09008C678A /* ARDUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDUtilities.h; sourceTree = "<group>"; };
+		63CA08A022F32A09008C678A /* ARDStatsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDStatsBuilder.m; sourceTree = "<group>"; };
+		63CA08A122F32A09008C678A /* DDPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageControl.h; sourceTree = "<group>"; };
+		63CA08A222F32A09008C678A /* ARDVideoCallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDVideoCallView.m; sourceTree = "<group>"; };
+		63CA08A322F32A09008C678A /* ARDBitrateTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDBitrateTracker.m; sourceTree = "<group>"; };
+		63CA08AE22F32A12008C678A /* CallConfig+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CallConfig+Private.h"; sourceTree = "<group>"; };
+		63CA08AF22F32A12008C678A /* CallConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallConfig.h; sourceTree = "<group>"; };
+		63CA08B022F32A12008C678A /* SipEngineManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SipEngineManager.mm; sourceTree = "<group>"; };
+		63CA08B122F32A12008C678A /* AccountConfig.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AccountConfig.mm; sourceTree = "<group>"; };
+		63CA08B222F32A12008C678A /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		63CA08B322F32A12008C678A /* CallConfigStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallConfigStore.h; sourceTree = "<group>"; };
+		63CA08B422F32A12008C678A /* AccountConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountConfig.h; sourceTree = "<group>"; };
+		63CA08B522F32A12008C678A /* sip_engine_types.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sip_engine_types.hxx; sourceTree = "<group>"; };
+		63CA08B622F32A12008C678A /* global_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global_config.h; sourceTree = "<group>"; };
+		63CA08B722F32A12008C678A /* Account.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Account.mm; sourceTree = "<group>"; };
+		63CA08B822F32A12008C678A /* RegistrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationManager.h; sourceTree = "<group>"; };
+		63CA08B922F32A12008C678A /* SipEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SipEngineDelegate.h; sourceTree = "<group>"; };
+		63CA08BA22F32A12008C678A /* RegistrationManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RegistrationManager.mm; sourceTree = "<group>"; };
+		63CA08BB22F32A12008C678A /* Call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Call.h; sourceTree = "<group>"; };
+		63CA08BC22F32A12008C678A /* CommonTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTypes.h; sourceTree = "<group>"; };
+		63CA08BD22F32A12008C678A /* Call.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Call.mm; sourceTree = "<group>"; };
+		63CA08BE22F32A12008C678A /* CallManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CallManager.mm; sourceTree = "<group>"; };
+		63CA08BF22F32A12008C678A /* SipEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SipEngine.h; sourceTree = "<group>"; };
+		63CA08C022F32A12008C678A /* SipEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SipEngine.mm; sourceTree = "<group>"; };
+		63CA08C122F32A12008C678A /* CallConfigStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallConfigStore.m; sourceTree = "<group>"; };
+		63CA08C222F32A12008C678A /* CallConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallConfig.m; sourceTree = "<group>"; };
+		63CA08C322F32A12008C678A /* CallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallManager.h; sourceTree = "<group>"; };
+		63CA08C422F32A12008C678A /* reSipWebRTC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reSipWebRTC.h; sourceTree = "<group>"; };
+		63CA08C522F32A12008C678A /* Commontypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Commontypes.m; sourceTree = "<group>"; };
+		63CA08C622F32A12008C678A /* SipEngineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SipEngineManager.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63CA084022F2B442008C678A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634E887D22F33B4200D2D22C /* CoreFoundation.framework in Frameworks */,
+				634E887B22F33B3600D2D22C /* MessageUI.framework in Frameworks */,
+				634E887922F33B2A00D2D22C /* MobileCoreServices.framework in Frameworks */,
+				634E887722F33B1C00D2D22C /* SystemConfiguration.framework in Frameworks */,
+				63B18BCA2321F6B500F8FFD0 /* reSIProcate.framework in Frameworks */,
+				634E887522F33B0200D2D22C /* AssetsLibrary.framework in Frameworks */,
+				634E887322F33AF100D2D22C /* CoreVideo.framework in Frameworks */,
+				634E887122F33AE400D2D22C /* UIKit.framework in Frameworks */,
+				634E886F22F33AD700D2D22C /* Foundation.framework in Frameworks */,
+				634E886D22F33ACB00D2D22C /* CoreGraphics.framework in Frameworks */,
+				634E886B22F33ABE00D2D22C /* CFNetwork.framework in Frameworks */,
+				634E886922F33AAD00D2D22C /* CoreMedia.framework in Frameworks */,
+				63B18BCC2321F6BF00F8FFD0 /* WebRTC.framework in Frameworks */,
+				634E886722F33AA300D2D22C /* OpenGLES.framework in Frameworks */,
+				634E886522F33A9200D2D22C /* QuartzCore.framework in Frameworks */,
+				634E886322F33A8000D2D22C /* AVFoundation.framework in Frameworks */,
+				634E886122F33A7200D2D22C /* GLKit.framework in Frameworks */,
+				634E885F22F33A5800D2D22C /* AudioToolbox.framework in Frameworks */,
+				634E885D22F33A4400D2D22C /* libresolv.9.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63CA085822F2B452008C678A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		634E884822F33A1600D2D22C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				634E884922F33A1600D2D22C /* UserSoundsPlayerUtil.mm */,
+				634E884A22F33A1600D2D22C /* UIImage+ARDUtilities.m */,
+				634E884B22F33A1600D2D22C /* PBFlatSettings.h */,
+				634E884C22F33A1600D2D22C /* UIImage+Additions.h */,
+				634E884D22F33A1600D2D22C /* CustomButton.h */,
+				634E884E22F33A1600D2D22C /* PBFlatButton.h */,
+				634E884F22F33A1700D2D22C /* UIImage+ARDUtilities.h */,
+				634E885022F33A1700D2D22C /* PBFlatSettings.m */,
+				634E885122F33A1700D2D22C /* PBFlatButton.m */,
+				634E885222F33A1700D2D22C /* UserSoundsPlayerUtil.h */,
+				634E885322F33A1700D2D22C /* CustomButton.m */,
+				634E885422F33A1700D2D22C /* UIImage+Additions.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		634E885B22F33A4400D2D22C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				634E887C22F33B4200D2D22C /* CoreFoundation.framework */,
+				634E887A22F33B3600D2D22C /* MessageUI.framework */,
+				634E887822F33B2A00D2D22C /* MobileCoreServices.framework */,
+				634E887622F33B1C00D2D22C /* SystemConfiguration.framework */,
+				634E887422F33B0100D2D22C /* AssetsLibrary.framework */,
+				634E887222F33AF100D2D22C /* CoreVideo.framework */,
+				634E887022F33AE400D2D22C /* UIKit.framework */,
+				634E886E22F33AD700D2D22C /* Foundation.framework */,
+				634E886C22F33ACB00D2D22C /* CoreGraphics.framework */,
+				634E886A22F33ABE00D2D22C /* CFNetwork.framework */,
+				634E886822F33AAD00D2D22C /* CoreMedia.framework */,
+				634E886622F33AA300D2D22C /* OpenGLES.framework */,
+				634E886422F33A9200D2D22C /* QuartzCore.framework */,
+				634E886222F33A8000D2D22C /* AVFoundation.framework */,
+				634E886022F33A7200D2D22C /* GLKit.framework */,
+				634E885E22F33A5800D2D22C /* AudioToolbox.framework */,
+				634E885C22F33A4400D2D22C /* libresolv.9.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63CA083A22F2B441008C678A = {
+			isa = PBXGroup;
+			children = (
+				63B18BCB2321F6BE00F8FFD0 /* WebRTC.framework */,
+				63B18BC92321F6B500F8FFD0 /* reSIProcate.framework */,
+				63CA084522F2B442008C678A /* reSipWebRTCSDKDemo */,
+				63CA085E22F2B452008C678A /* reSipWebRTCSDKDemoUITests */,
+				63CA084422F2B442008C678A /* Products */,
+				634E885B22F33A4400D2D22C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63CA084422F2B442008C678A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63CA084322F2B442008C678A /* reSipWebRTCSDKDemo.app */,
+				63CA085B22F2B452008C678A /* reSipWebRTCSDKDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63CA084522F2B442008C678A /* reSipWebRTCSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				634E884822F33A1600D2D22C /* Utils */,
+				63CA08AD22F32A12008C678A /* reSipWebRTCSDK */,
+				63CA089122F32A09008C678A /* CallingScreen */,
+				63CA084622F2B442008C678A /* AppDelegate.h */,
+				63CA084722F2B442008C678A /* AppDelegate.m */,
+				638EE54C22F87A39007533E4 /* ARDSettingsViewController.h */,
+				638EE54B22F87A39007533E4 /* ARDSettingsViewController.m */,
+				63CA084922F2B442008C678A /* ViewController.h */,
+				63CA084A22F2B442008C678A /* ViewController.m */,
+				63CA084C22F2B442008C678A /* Main.storyboard */,
+				63CA084F22F2B452008C678A /* Assets.xcassets */,
+				63CA085122F2B452008C678A /* LaunchScreen.storyboard */,
+				63CA085422F2B452008C678A /* Info.plist */,
+				63CA085522F2B452008C678A /* main.m */,
+			);
+			path = reSipWebRTCSDKDemo;
+			sourceTree = "<group>";
+		};
+		63CA085E22F2B452008C678A /* reSipWebRTCSDKDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				63CA085F22F2B452008C678A /* reSipWebRTCSDKDemoUITests.m */,
+				63CA086122F2B452008C678A /* Info.plist */,
+			);
+			path = reSipWebRTCSDKDemoUITests;
+			sourceTree = "<group>";
+		};
+		63CA089122F32A09008C678A /* CallingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				63CA089222F32A09008C678A /* UIImage+ARDUtilities.m */,
+				63CA089322F32A09008C678A /* ARDUtilities.m */,
+				63CA089422F32A09008C678A /* ARDStatsView.h */,
+				63CA089522F32A09008C678A /* CallingScreenViewController.h */,
+				63CA089922F32A09008C678A /* CallingScreenViewController.mm */,
+				63CA089722F32A09008C678A /* DDPageControl.m */,
+				63CA089822F32A09008C678A /* ARDStatsBuilder.h */,
+				63CA089A22F32A09008C678A /* ARDBitrateTracker.h */,
+				63CA089B22F32A09008C678A /* ARDVideoCallView.h */,
+				63CA089C22F32A09008C678A /* ARDStatsView.m */,
+				63CA089D22F32A09008C678A /* UIImage+ARDUtilities.h */,
+				63CA089E22F32A09008C678A /* ARDUtilities.h */,
+				63CA08A022F32A09008C678A /* ARDStatsBuilder.m */,
+				63CA08A122F32A09008C678A /* DDPageControl.h */,
+				63CA08A222F32A09008C678A /* ARDVideoCallView.m */,
+				63CA08A322F32A09008C678A /* ARDBitrateTracker.m */,
+			);
+			path = CallingScreen;
+			sourceTree = "<group>";
+		};
+		63CA08AD22F32A12008C678A /* reSipWebRTCSDK */ = {
+			isa = PBXGroup;
+			children = (
+				634AE58F230AE51800D700AF /* ARDCaptureController.h */,
+				634AE590230AE51800D700AF /* ARDCaptureController.m */,
+				638EE54E22F881D5007533E4 /* RTCVideoCodecInfo+HumanReadable.h */,
+				638EE54F22F881D5007533E4 /* RTCVideoCodecInfo+HumanReadable.m */,
+				63CA08AE22F32A12008C678A /* CallConfig+Private.h */,
+				63CA08AF22F32A12008C678A /* CallConfig.h */,
+				63CA08B022F32A12008C678A /* SipEngineManager.mm */,
+				63CA08B122F32A12008C678A /* AccountConfig.mm */,
+				63CA08B222F32A12008C678A /* Account.h */,
+				63CA08B722F32A12008C678A /* Account.mm */,
+				63CA08B322F32A12008C678A /* CallConfigStore.h */,
+				63CA08B422F32A12008C678A /* AccountConfig.h */,
+				63CA08B522F32A12008C678A /* sip_engine_types.hxx */,
+				63CA08B622F32A12008C678A /* global_config.h */,
+				63CA08B822F32A12008C678A /* RegistrationManager.h */,
+				63CA08B922F32A12008C678A /* SipEngineDelegate.h */,
+				63CA08BA22F32A12008C678A /* RegistrationManager.mm */,
+				63CA08BB22F32A12008C678A /* Call.h */,
+				63CA08BD22F32A12008C678A /* Call.mm */,
+				63CA08BC22F32A12008C678A /* CommonTypes.h */,
+				63CA08C322F32A12008C678A /* CallManager.h */,
+				63CA08BE22F32A12008C678A /* CallManager.mm */,
+				63CA08BF22F32A12008C678A /* SipEngine.h */,
+				63CA08C022F32A12008C678A /* SipEngine.mm */,
+				63CA08C122F32A12008C678A /* CallConfigStore.m */,
+				63CA08C222F32A12008C678A /* CallConfig.m */,
+				63CA08C422F32A12008C678A /* reSipWebRTC.h */,
+				63CA08C522F32A12008C678A /* Commontypes.m */,
+				63CA08C622F32A12008C678A /* SipEngineManager.h */,
+			);
+			path = reSipWebRTCSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63CA084222F2B442008C678A /* reSipWebRTCSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63CA086422F2B453008C678A /* Build configuration list for PBXNativeTarget "reSipWebRTCSDKDemo" */;
+			buildPhases = (
+				63CA083F22F2B442008C678A /* Sources */,
+				63CA084022F2B442008C678A /* Frameworks */,
+				63CA084122F2B442008C678A /* Resources */,
+				63CA087F22F2BE77008C678A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = reSipWebRTCSDKDemo;
+			productName = reSipWebRTCSDKDemo;
+			productReference = 63CA084322F2B442008C678A /* reSipWebRTCSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63CA085A22F2B452008C678A /* reSipWebRTCSDKDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63CA086722F2B453008C678A /* Build configuration list for PBXNativeTarget "reSipWebRTCSDKDemoUITests" */;
+			buildPhases = (
+				63CA085722F2B452008C678A /* Sources */,
+				63CA085822F2B452008C678A /* Frameworks */,
+				63CA085922F2B452008C678A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63CA085D22F2B452008C678A /* PBXTargetDependency */,
+			);
+			name = reSipWebRTCSDKDemoUITests;
+			productName = reSipWebRTCSDKDemoUITests;
+			productReference = 63CA085B22F2B452008C678A /* reSipWebRTCSDKDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63CA083B22F2B441008C678A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = reSipWebRTC;
+				TargetAttributes = {
+					63CA084222F2B442008C678A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					63CA085A22F2B452008C678A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 63CA084222F2B442008C678A;
+					};
+				};
+			};
+			buildConfigurationList = 63CA083E22F2B441008C678A /* Build configuration list for PBXProject "reSipWebRTCSDKDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63CA083A22F2B441008C678A;
+			productRefGroup = 63CA084422F2B442008C678A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63CA084222F2B442008C678A /* reSipWebRTCSDKDemo */,
+				63CA085A22F2B452008C678A /* reSipWebRTCSDKDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63CA084122F2B442008C678A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63CA085322F2B452008C678A /* LaunchScreen.storyboard in Resources */,
+				63CA085022F2B452008C678A /* Assets.xcassets in Resources */,
+				63CA084E22F2B442008C678A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63CA085922F2B452008C678A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63CA083F22F2B442008C678A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63CA08C722F32A12008C678A /* SipEngineManager.mm in Sources */,
+				63CA08A722F32A09008C678A /* DDPageControl.m in Sources */,
+				63CA08CD22F32A12008C678A /* SipEngine.mm in Sources */,
+				634E885922F33A1700D2D22C /* CustomButton.m in Sources */,
+				63CA08A822F32A09008C678A /* CallingScreenViewController.mm in Sources */,
+				63CA08CB22F32A12008C678A /* Call.mm in Sources */,
+				634E885522F33A1700D2D22C /* UserSoundsPlayerUtil.mm in Sources */,
+				63CA08AB22F32A09008C678A /* ARDVideoCallView.m in Sources */,
+				63CA08CE22F32A12008C678A /* CallConfigStore.m in Sources */,
+				63CA084B22F2B442008C678A /* ViewController.m in Sources */,
+				63CA08D022F32A12008C678A /* Commontypes.m in Sources */,
+				638EE54D22F87A39007533E4 /* ARDSettingsViewController.m in Sources */,
+				63CA085622F2B452008C678A /* main.m in Sources */,
+				63CA08CC22F32A12008C678A /* CallManager.mm in Sources */,
+				634E885A22F33A1700D2D22C /* UIImage+Additions.m in Sources */,
+				63CA08C822F32A12008C678A /* AccountConfig.mm in Sources */,
+				63CA08CF22F32A12008C678A /* CallConfig.m in Sources */,
+				634E885822F33A1700D2D22C /* PBFlatButton.m in Sources */,
+				634E885722F33A1700D2D22C /* PBFlatSettings.m in Sources */,
+				63CA084822F2B442008C678A /* AppDelegate.m in Sources */,
+				638EE55022F881D5007533E4 /* RTCVideoCodecInfo+HumanReadable.m in Sources */,
+				63CA08AC22F32A09008C678A /* ARDBitrateTracker.m in Sources */,
+				634E885622F33A1700D2D22C /* UIImage+ARDUtilities.m in Sources */,
+				63CA08AA22F32A09008C678A /* ARDStatsBuilder.m in Sources */,
+				63CA08A522F32A09008C678A /* ARDUtilities.m in Sources */,
+				63CA08CA22F32A12008C678A /* RegistrationManager.mm in Sources */,
+				63CA08A422F32A09008C678A /* UIImage+ARDUtilities.m in Sources */,
+				63CA08A922F32A09008C678A /* ARDStatsView.m in Sources */,
+				634AE591230AE51900D700AF /* ARDCaptureController.m in Sources */,
+				63CA08C922F32A12008C678A /* Account.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63CA085722F2B452008C678A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63CA086022F2B452008C678A /* reSipWebRTCSDKDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63CA085D22F2B452008C678A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63CA084222F2B442008C678A /* reSipWebRTCSDKDemo */;
+			targetProxy = 63CA085C22F2B452008C678A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63CA084C22F2B442008C678A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63CA084D22F2B442008C678A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63CA085122F2B452008C678A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63CA085222F2B452008C678A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63CA086222F2B453008C678A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63CA086322F2B453008C678A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63CA086522F2B453008C678A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YNS65CK6H6;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libs",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = reSipWebRTCSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = reSipWebRTC.reSipWebRTCSDKDemo2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63CA086622F2B453008C678A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YNS65CK6H6;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libs",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = reSipWebRTCSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = reSipWebRTC.reSipWebRTCSDKDemo2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		63CA086822F2B453008C678A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YNS65CK6H6;
+				INFOPLIST_FILE = reSipWebRTCSDKDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = reSipWebRTC.reSipWebRTCSDKDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = reSipWebRTCSDKDemo;
+			};
+			name = Debug;
+		};
+		63CA086922F2B453008C678A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YNS65CK6H6;
+				INFOPLIST_FILE = reSipWebRTCSDKDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = reSipWebRTC.reSipWebRTCSDKDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = reSipWebRTCSDKDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63CA083E22F2B441008C678A /* Build configuration list for PBXProject "reSipWebRTCSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63CA086222F2B453008C678A /* Debug */,
+				63CA086322F2B453008C678A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63CA086422F2B453008C678A /* Build configuration list for PBXNativeTarget "reSipWebRTCSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63CA086522F2B453008C678A /* Debug */,
+				63CA086622F2B453008C678A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63CA086722F2B453008C678A /* Build configuration list for PBXNativeTarget "reSipWebRTCSDKDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63CA086822F2B453008C678A /* Debug */,
+				63CA086922F2B453008C678A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63CA083B22F2B441008C678A /* Project object */;
+}
