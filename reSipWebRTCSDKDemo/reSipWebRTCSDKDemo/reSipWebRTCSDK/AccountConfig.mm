@@ -1,6 +1,9 @@
-#import "AccountConfig.h"
+
+#import "AccountConfig+Private.h"
+#import "AccountConfigStore.h"
 
 @implementation AccountConfig {
+   AccountConfigStore * _accountConfigStore;
 }
 
 @synthesize username = _username;
@@ -26,6 +29,18 @@
         self->_trans_type = kTCP;
     }
     return self;
+}
+
+- (AccountConfigStore *)callConfigStore {
+    if (!_accountConfigStore) {
+        _accountConfigStore = [[AccountConfigStore alloc] init];
+        [self registerStoreDefaults];
+    }
+    return _accountConfigStore;
+}
+
+- (void)registerStoreDefaults {
+    [AccountConfigStore setDefaultsForAccountConfig:@"" authname:@"" password:@"" server:@"" proxy:@"" displayname:@""];
 }
 
 @end

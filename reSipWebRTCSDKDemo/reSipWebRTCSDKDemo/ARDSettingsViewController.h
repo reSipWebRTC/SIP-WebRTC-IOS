@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 
 @class CallConfig;
+@class AccountConfig;
 
 NS_ASSUME_NONNULL_BEGIN
 /**
@@ -25,7 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
  * @param settingsModel model class for the user settings.
  */
 - (instancetype)initWithStyle:(UITableViewStyle)style
-                settingsModel:(CallConfig *)settingsModel;
+                settingsModel:(CallConfig *)settingsModel
+                accountConfig:(AccountConfig *)accountConfig;
 
 #pragma mark - Unavailable
 

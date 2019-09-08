@@ -198,7 +198,9 @@
 - (IBAction)SettingsButton:(id)sender {
     ARDSettingsViewController *settingsController =
     [[ARDSettingsViewController alloc] initWithStyle:UITableViewStyleGrouped
-                                       settingsModel:[[CallConfig alloc] init]];
+                                       settingsModel:[[CallConfig alloc] init]
+                                       accountConfig:[[AccountConfig alloc] init]
+    ];
     
     UINavigationController *navigationController =
     [[UINavigationController alloc] initWithRootViewController:settingsController];
