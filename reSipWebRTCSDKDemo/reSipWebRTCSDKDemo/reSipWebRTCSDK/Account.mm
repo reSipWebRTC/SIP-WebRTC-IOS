@@ -21,10 +21,17 @@
     self->_accountConfig = accountConfig;
     int acc_Id = [registrationManager makeRegister:self->_accountConfig];
     self->_accId = acc_Id;
+    [registrationManager registerAccount:self];
 }
-    
+
+- (NSInteger)getAccId
+{
+    return _accId;
+}
+
 - (void)unregister: (int)accId {
     [registrationManager makeDeRegister:accId];
+    [registrationManager unregisterAccount:self];
 }
     
 - (void)refreshRegistration: (int)accId {

@@ -7,6 +7,7 @@ static RegistrationManager *the_registrationManager_ = NULL;
 
 @implementation RegistrationManager {
     RTCRegistrationManager *rtcRegistrationManager;
+    NSMutableDictionary<NSNumber *, id> * AccountMap;
 }
 
 @synthesize registrationDelegate = _registrationDelegate;
@@ -25,6 +26,7 @@ static RegistrationManager *the_registrationManager_ = NULL;
     if ((self = [super init])) {
         rtcRegistrationManager = [[[SipEngineManager instance] getSipEngine].rtcSipEngine GetRegistrationManager];
         [rtcRegistrationManager RegisterRegistrationDelegate:self];
+        AccountMap = [[NSMutableDictionary alloc] initWithCapacity:5];
     }
     
     return self;
@@ -53,7 +55,19 @@ static RegistrationManager *the_registrationManager_ = NULL;
     if(rtcRegistrationManager != NULL)
        [rtcRegistrationManager MakeDeRegister:accId];
 }
-    
+
+- (void)registerAccount: (Account *)account
+{
+    if(AccountMap != nil)
+        [AccountMap setObject:account forKey:[NSNumber numberWithInteger:account.getAccId]];
+}
+
+- (void)unregisterAccount: (Account *)account
+{
+    if(AccountMap != nil)
+        [AccountMap removeObjectForKey:[NSNumber numberWithInteger:account.getAccId]];
+}
+
 - (void)refreshRegistration: (int)accId {
     if(rtcRegistrationManager != NULL)
         [rtcRegistrationManager RefreshRegistration:accId];

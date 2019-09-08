@@ -17,6 +17,8 @@
 - (void)accept: (int)callId answersdp:(NSString* )sdp;
 - (void)hangup: (int)callId;
 - (void)reject: (int)callId;
+- (void)registerCall: (Call *)call;
+- (void)unregisterCall: (Call *)call;
 - (void)sendDtmfDigits: (int)callId digits:(NSString*)digits;
 - (void)registerUICallStateDelegate: (id<SipEngineUICallDelegate>)delegate;
 

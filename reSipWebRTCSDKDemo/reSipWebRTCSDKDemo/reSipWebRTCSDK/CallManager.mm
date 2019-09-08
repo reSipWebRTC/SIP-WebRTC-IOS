@@ -31,6 +31,7 @@ static CallManager *the_callManager_ = NULL;
     RTCCallManager* rtcCallManager;
     Call* current_call_;
     CallConfig *_callConfig;
+    NSMutableDictionary<NSNumber *, id> * CallMap;
 }
 
 @synthesize callDelegate = _callDelegate;
@@ -51,6 +52,7 @@ static CallManager *the_callManager_ = NULL;
     if ((self = [super init])) {
         rtcCallManager = [[[SipEngineManager instance] getSipEngine].rtcSipEngine GetCallManager];
         [rtcCallManager RegisterCallStateDelegate:self];
+        CallMap = [[NSMutableDictionary alloc] initWithCapacity:5];
         /*RTCPeerConnectionFactoryOptions* options = [[RTCPeerConnectionFactoryOptions alloc] init];
         //options.disableEncryption = TRUE;
         options.disableNetworkMonitor = TRUE;
@@ -101,6 +103,18 @@ static CallManager *the_callManager_ = NULL;
 - (void)reject: (int)callId
 {
     [rtcCallManager Reject:callId];
+}
+
+- (void)registerCall: (Call *)call
+{
+    if(CallMap != nil)
+        [CallMap setObject:call forKey:[NSNumber numberWithInteger:call.getCallId]];
+}
+
+- (void)unregisterCall: (Call *)call
+{
+    if(CallMap != nil)
+        [CallMap removeObjectForKey:[NSNumber numberWithInteger:call.getCallId]];
 }
 
 - (void)sendDtmfDigits: (int)callId digits:(NSString*)digits
