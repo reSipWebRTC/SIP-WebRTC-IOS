@@ -640,17 +640,17 @@ didSetSessionDescriptionWithError:(NSError *)error {
     return constraints;
 }
 
-- (void)setMaxBitrateForPeerConnectionVideoSender {
+- (void)setMaxBitrate {
     for (RTCRtpSender *sender in _peerConnection.senders) {
         if (sender.track != nil) {
             if ([sender.track.kind isEqualToString:kARDVideoTrackKind]) {
-                [self setMaxBitrate:[_callConfig currentMaxBitrateConfigFromStore] forVideoSender:sender];
+                [self setMaxBitrateForPeerConnectionVideoSender:[_callConfig currentMaxBitrateConfigFromStore] forVideoSender:sender];
             }
         }
     }
 }
 
-- (void)setMaxBitrate:(NSNumber *)maxBitrate forVideoSender:(RTCRtpSender *)sender {
+- (void)setMaxBitrateForPeerConnectionVideoSender:(NSNumber *)maxBitrate forVideoSender:(RTCRtpSender *)sender {
     if (maxBitrate.intValue <= 0) {
         return;
     }
