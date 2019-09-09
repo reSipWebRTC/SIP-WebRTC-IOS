@@ -74,11 +74,13 @@ static CallManager *the_callManager_ = NULL;
     int callId = [rtcCallManager CreateCall:accId];
     current_call_ = [[Call alloc] init];
     [current_call_ setCallId:callId];
+    self->current_call_.direction = kOutgoing;
+
     //self->_callConfig = callConfig;
     
     //dispatch_async(dispatch_get_main_queue(), ^{
-        if(self->_callDelegate != nullptr)
-            [self->_callDelegate OnNewOutgoingCall:self->current_call_ caller:@"" video_call:true];
+        //if(self->_callDelegate != nullptr)
+           // [self->_callDelegate OnNewOutgoingCall:self->current_call_ //caller:@"" video_call:true];
     //});
     
     return current_call_;

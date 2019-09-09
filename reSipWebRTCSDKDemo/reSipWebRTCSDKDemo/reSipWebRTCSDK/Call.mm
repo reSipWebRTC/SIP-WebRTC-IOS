@@ -232,7 +232,7 @@ _defaultPeerConnectionConstraints;
 }
 
 - (void)callOrAnswer: (RTCSessionDescription *)localsdp{
-    NSLog(@"callOrAnswer:%@", localsdp.sdp);
+    //NSLog(@"callOrAnswer:%@", localsdp.sdp);
     if(_isIncomingCall)
        [[CallManager instance] accept:_callId answersdp:localsdp.sdp];
     else {

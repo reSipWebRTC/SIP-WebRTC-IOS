@@ -286,13 +286,11 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    NSLog(@"=======initWithFrame=111====");
     if (self = [super initWithFrame:frame])
     {
 #if defined(RTC_SUPPORTS_METAL)
         _remoteVideoView = [[RTCMTLVideoView alloc] initWithFrame:CGRectZero];
 #else
-        NSLog(@"=======initWithFrame==222===");
         RTCEAGLVideoView *remoteView = [[RTCEAGLVideoView alloc] initWithFrame:CGRectZero];
         remoteView.delegate = self;
         _remoteVideoView = remoteView;
@@ -414,7 +412,7 @@
         _statusLabel.textColor = [UIColor whiteColor];
     
         callingNumberLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        [callingNumberLabel setText:@"+8618627935526"];
+        //[callingNumberLabel setText:@"+8618627935526"];
         callingNumberLabel.font = [UIFont systemFontOfSize:28];
         [callingNumberLabel setAlpha:0.9f];
         // set some label properties

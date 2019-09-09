@@ -149,27 +149,11 @@ static CallingScreenViewController *the_instance = NULL;;
     
     [_avCallingView setARDVideoCallingMode:mode_];
     
-    /*if(current_call_)
+    if(current_call_)
     {
-        NSString *caller_id = @"1001";
-        
-        Contact *cc = [[ContactManagerUtil instance] getContactManager].do_search([caller_id UTF8String]);
-        
-        if(cc)
-        {
-            caller_id = [NSString stringWithUTF8String:cc->name().c_str()];
-        }
+        NSString *caller_id = [current_call_ peerNumber];
         [_avCallingView setCalledNumber:caller_id];
-        
-        if(current_call_->direction() == client::kIncoming)
-        {
-            
-            [_avCallingView setCallingTimeLabel:current_call_->support_video()? NSLocalizedString(@"Video Call Incoming", @"") : NSLocalizedString(@"Voice Call Incoming", @"")];
-        } else
-        {
-            [_avCallingView setCallingTimeLabel:current_call_->support_video()? NSLocalizedString(@"Video Calling", @"") : NSLocalizedString(@"Voice Calling", @"")];
-        }
-    }*/
+    }
     
     countTimer = nil;
 }
@@ -203,7 +187,7 @@ static CallingScreenViewController *the_instance = NULL;;
     
     if(current_call_)
     {
-        NSString *caller_id = @"1001";
+        NSString *caller_id = [current_call_ peerNumber];
         
        // if(cc)
         //{
@@ -279,22 +263,6 @@ static CallingScreenViewController *the_instance = NULL;;
     if(current_call_ )
     {
         _avCallingView.inCalling = YES;
-       // VideoSize_t *video_size = [[SipEngineManager instance] getVideoSize];
-       // float bitrate = [[SipEngineManager instance] getBitrate];
-       // float fps = [[SipEngineManager instance] getFrameRate];
-        //client::MediaStream *media_stream = current_call_->media_stream();
-       // client::VideoStream *video_stream = media_stream->video_stream();
-        
-      //  [_avCallingView.localVideoView ResetDisplay];
-        //[_avCallingView.remoteVideoView ResetDisplay];
-        
-       // client::RTCVideoEngine *video_engine = [[SipEngineManager instance] getRTCVideoEngine];
-        //int camera_orientation = video_engine->GetCameraOrientation(useFrontFaceingCamera? 1:0);
-        //video_stream->SetupVideoStream(useFrontFaceingCamera? 1:0, NULL,NULL,local_adapter.nativeVideoRenderer,remote_adapter.nativeVideoRenderer,(int)[self getCameraOrientation:camera_orientation],video_size->width,video_size->height, bitrate,fps);
-        
-        //video_stream->StartReceiving();
-        //video_stream->StartSending();
-        
         [self changeRemoteVideoSize];
     }
 }
@@ -392,11 +360,6 @@ static CallingScreenViewController *the_instance = NULL;;
     
     if(current_call_ && [current_call_ support_video])
     {
-       // client::MediaStream *media_stream = current_call_->media_stream();
-       // client::VideoStream *video_stream = media_stream->video_stream();
-       // client::RTCVideoEngine *video_engine = [[SipEngineManager instance] getRTCVideoEngine];
-        //int camera_orientation = video_engine->GetCameraOrientation(useFrontFaceingCamera? 1:0);
-       // video_stream->ChangeCaptureRotation((int)[self getCameraOrientation:camera_orientation]);
     }
     [CATransaction commit];
 }
@@ -411,48 +374,6 @@ static int remote_bitrate = 0;
 {
     if(current_call_ && [current_call_ support_video])
     {
-        //client::CallStatistics net_stats;
-       // client::VideoStream* video_stream = current_call_->media_stream()->video_stream();
-        //client::AudioStream* audio_stream = current_call_->media_stream()->audio_stream();
-        
-      /*  NSString *quality = @"";
-        
-        if(audio_stream && audio_stream->GetCallStatistics(net_stats)==0)
-        {
-            if(net_stats.fractionLost<=10){
-                NSLog(@"Network quality: good");
-                quality = @"good";
-            }else if(net_stats.fractionLost > 10 && net_stats.fractionLost<=20){
-                NSLog(@"Network quality: normal");
-                quality = @"normal";
-            }else if(net_stats.fractionLost > 20){
-                NSLog(@"Network quality: bad");
-                quality = @"bad";
-            }
-        }
-
-        unsigned short fraction_lost = 0;
-        unsigned int cumulative_lost = 0;
-        unsigned int extended_max = 0;
-        unsigned int jitter = 0;
-        int rtt_ms = 0;
-        float vie_pkt_lost_percent  = 0;
-        float voe_pkt_lost_percent  = 0;
-        if(video_stream && video_stream->IsReceiving() && video_stream->IsSending() && video_stream->GetReceivedRTCPStatistics(fraction_lost,cumulative_lost,extended_max,jitter,rtt_ms) == 0)
-        {
-            vie_pkt_lost_percent = ((float)fraction_lost * 100.f ) / 255.f;
-            voe_pkt_lost_percent = ((float)net_stats.fractionLost * 100.f ) / 255.f;
-        }
-        
-        NSString *lost_delay_info  = [NSString stringWithFormat:@"A: 延迟 %dms,丢包率 %.2f%%, V: 延迟 %d ms,丢包率 %.2f %%",net_stats.rttMs,voe_pkt_lost_percent,rtt_ms,vie_pkt_lost_percent];
-        
-        _avCallingView.packetLostLabel.text = lost_delay_info;
-        
-        NSString *vsize_info = [NSString stringWithFormat:@"Rx Video Size: %d x %d, Quality: %@",remote_video_width,remote_video_height,quality];
-        NSString *bitrate_info = [NSString stringWithFormat:@"RX: %dkbps/%dfps, Tx: %dkbps/%dfps",remote_bitrate/1024,remote_fps,local_bitrate/1024,local_fps];
-        
-        _avCallingView.videoSizeLabel.text = vsize_info;
-        _avCallingView.bitRateInfoLabel.text = bitrate_info;*/
     }
 }
 

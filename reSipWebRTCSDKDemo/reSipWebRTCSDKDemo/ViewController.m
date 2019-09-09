@@ -81,18 +81,15 @@
 }
 
 - (void)OnNewIncomingCall:(Call *)call caller:(NSString *)caller video_call:(BOOL)video_call {
-    
     [calling_screen_view setCurrentCall:call];
     [calling_screen_view setCallingMode:video_call? kVideoRinging : kAudioRinging];
     [self showCallingViewController:video_call playRinging:NO];
 }
 
 - (void)OnNewOutgoingCall:(Call *)call caller:(NSString *)caller video_call:(BOOL)video_call {
-    
     [calling_screen_view setCurrentCall:call];
-    [calling_screen_view setCallingMode:video_call? kVideoRinging : kAudioRinging];
+    [calling_screen_view setCallingMode:video_call? kVideoCalling : kAudioCalling];
     [self showCallingViewController:video_call playRinging:NO];
-
 }
 
 - (void)OnDtmfEvent:(int)callId dtmf:(int)dtmf duration:(int)duration up:(int)up
@@ -127,7 +124,7 @@
 }
 
 - (void)OnRegistrationSucess:(Account *)account {
-    NSLog(@"=====OnRegistrationSucess======");
+    NSLog(@"OnRegistrationSucess");
 }
 
 - (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
@@ -192,7 +189,8 @@
 - (IBAction)CallButter:(id)sender {
     CallConfig *callConfig = [[CallConfig alloc]init];
     Call* current_call = [[SipEngineManager instance] createCall:current_account.accId];
-    [current_call makeCall:@"1101" callConfig:callConfig];
+    [current_call makeCall:@"1105" callConfig:callConfig];
+    [self OnNewOutgoingCall:current_call caller:[current_call peerNumber] video_call:YES];
 }
 
 - (IBAction)SettingsButton:(id)sender {
