@@ -504,6 +504,7 @@ didCreateSessionDescription:(RTCSessionDescription *)sdp
                                [strongSelf peerConnection:strongSelf.peerConnection
                         didSetSessionDescriptionWithError:error];
                 }];
+        [self setMaxBitrate];
         });
 }
 
