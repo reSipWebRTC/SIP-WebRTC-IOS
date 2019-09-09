@@ -29,15 +29,20 @@
 #import "SipEngine.h"
 //#import "CallConfig.h"
 
-//static NSString * const kARDDefaultSTUNServerUrl =
-//@"stun:123.57.209.70:19302";
-//static NSString * const kARDDefaultTURNServerUrl =
-//@"turn:123.57.209.70:19302";
+/*static NSString * const kARDDefaultSTUNServerUrl =
+@"stun:123.57.209.70:19302";
+static NSString * const kARDDefaultTURNServerUrl =
+@"turn:123.57.209.70:19302";*/
 
-static NSString * const kARDDefaultSTUNServerUrl =
+/*static NSString * const kARDDefaultSTUNServerUrl =
 @"stun:222.211.83.166:3678";
 static NSString * const kARDDefaultTURNServerUrl =
-@"turn:222.211.83.166:3678";
+@"turn:222.211.83.166:3678";*/
+
+static NSString * const kARDDefaultSTUNServerUrl =
+@"stun:39.108.167.93:19302";
+static NSString * const kARDDefaultTURNServerUrl =
+@"turn:39.108.167.93:19302";
 
 static NSString * const kARDMediaStreamId = @"ARDAMS";
 static NSString * const kARDAudioTrackId = @"ARDAMSa0";
@@ -86,7 +91,7 @@ _defaultPeerConnectionConstraints;
 
 - (void)configure {
     _iceServers = [NSMutableArray arrayWithObject:[self defaultSTUNServer]];
-    [_iceServers addObject:[self defaultTURNServer]];
+    //[_iceServers addObject:[self defaultTURNServer]];
     _factory = nil;
     _isAudioOnly = FALSE;
     _isIncomingCall = FALSE;
@@ -187,6 +192,7 @@ _defaultPeerConnectionConstraints;
                                         @"expires" : @100000,
                                         @"name" : @"RSASSA-PKCS1-v1_5"}];
     config.iceServers = _iceServers;
+    config.tcpCandidatePolicy = RTCTcpCandidatePolicyDisabled;
     config.sdpSemantics = RTCSdpSemanticsUnifiedPlan;
     config.certificate = pcert;
 
@@ -481,9 +487,9 @@ didCreateSessionDescription:(RTCSessionDescription *)sdp
         if (error) {
             RTCLogError(@"Failed to create session description. Error: %@", error);
             [self disconnect];
-            NSDictionary *userInfo = @{
-                                       NSLocalizedDescriptionKey: @"Failed to create session description.",
-                                       };
+            //NSDictionary *userInfo = @{
+                                      // NSLocalizedDescriptionKey: @"Failed to create session description.",
+                                      // };
             //NSError *sdpError =
             //[[NSError alloc] initWithDomain:kARDAppClientErrorDomain
               //                         code:kARDAppClientErrorCreateSDP
@@ -593,9 +599,12 @@ didSetSessionDescriptionWithError:(NSError *)error {
 }*/
 
 - (RTCIceServer *)defaultTURNServer {
+    //return [[RTCIceServer alloc] initWithURLStrings:@[kARDDefaultTURNServerUrl]
+                                    //username:@"jiangbo"
+                                   // credential:@"jiangbo"];
     return [[RTCIceServer alloc] initWithURLStrings:@[kARDDefaultTURNServerUrl]
-                                    username:@"jiangbo"
-                                    credential:@"jiangbo"];
+                                           username:@"websip"
+                                         credential:@"websip"];
 }
 
 

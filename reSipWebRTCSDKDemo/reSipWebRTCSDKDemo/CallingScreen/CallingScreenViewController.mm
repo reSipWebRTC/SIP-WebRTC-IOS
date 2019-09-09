@@ -224,9 +224,9 @@ static CallingScreenViewController *the_instance = NULL;;
         [self stopTimer];
         [self hangup];
         
-        [_avCallingView stopCallingUI];
+        [self->_avCallingView stopCallingUI];
         [self performSelector:@selector(dismissCallingUIAnimated) withObject:nil afterDelay:1.0f];
-        current_call_ = nil;
+        self->current_call_ = nil;
     });
     
     [[UIApplication sharedApplication] setIdleTimerDisabled:NO];

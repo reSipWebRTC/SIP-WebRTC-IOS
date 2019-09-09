@@ -1426,11 +1426,11 @@
             [self layoutToCalling:YES];
             break;
         case kAudioRinging:
-            NSLog(@"=====kAudioRinging=====");
+            NSLog(@"kAudioRinging");
             [self layoutToInCallRinging:NO];
             break;
         case kVideoRinging:
-            NSLog(@"=====kVideoRinging=====");
+            NSLog(@"kVideoRinging");
             [self layoutToInCallRinging:YES];
             break;
         case kAudioAnswered:
