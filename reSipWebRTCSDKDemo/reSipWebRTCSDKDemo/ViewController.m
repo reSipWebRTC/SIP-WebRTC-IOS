@@ -190,7 +190,7 @@
     CallConfig *callConfig = [[CallConfig alloc]init];
     Call* current_call = [[SipEngineManager instance] createCall:current_account.accId];
     [current_call makeCall:@"1105" callConfig:callConfig];
-    [self OnNewOutgoingCall:current_call caller:[current_call peerNumber] video_call:YES];
+   // [self OnNewOutgoingCall:current_call caller:[current_call peerNumber] video_call:YES];
 }
 
 - (IBAction)SettingsButton:(id)sender {

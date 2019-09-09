@@ -79,8 +79,8 @@ static CallManager *the_callManager_ = NULL;
     //self->_callConfig = callConfig;
     
     //dispatch_async(dispatch_get_main_queue(), ^{
-        //if(self->_callDelegate != nullptr)
-           // [self->_callDelegate OnNewOutgoingCall:self->current_call_ //caller:@"" video_call:true];
+    if(self->_callDelegate != nullptr)
+            [self->_callDelegate OnNewOutgoingCall:self->current_call_ caller:@"" video_call:true];
     //});
     
     return current_call_;
