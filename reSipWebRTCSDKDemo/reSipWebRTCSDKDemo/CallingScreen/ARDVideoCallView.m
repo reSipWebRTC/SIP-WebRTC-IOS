@@ -540,7 +540,6 @@
 
 -(void) hiddenAllWidgets
 {
-    NSLog(@"==========hiddenAllWidgets=======");
     [_localVideoView setHidden:YES];
     [_remoteVideoView setHidden:YES];
     [videoCallingPageControl setHidden:YES];

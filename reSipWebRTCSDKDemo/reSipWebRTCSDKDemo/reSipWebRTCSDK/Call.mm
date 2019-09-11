@@ -27,7 +27,16 @@
 #import <WebRTC/RTCDefaultVideoEncoderFactory.h>
 
 #import "SipEngine.h"
-//#import "CallConfig.h"
+
+//#ifdef DEBUG //调试
+
+#define NSLog(FORMAT, ...) fprintf(stderr, "%s:%zd\t%s\n", [[[NSString stringWithUTF8String: __FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat: FORMAT, ## __VA_ARGS__] UTF8String]);
+
+//#else // 发布
+
+//#define NSLog(FORMAT, ...) nil
+
+//#endif
 
 /*static NSString * const kARDDefaultSTUNServerUrl =
 @"stun:123.57.209.70:19302";
@@ -153,6 +162,7 @@ _defaultPeerConnectionConstraints;
     RTCSessionDescription *description =
     [[RTCSessionDescription alloc]initWithType:type sdp:Sdp];
     __weak Call *weakSelf = self;
+    NSLog(@"===remoteSdp===:%@", Sdp);
     [_peerConnection setRemoteDescription:description
                         completionHandler:^(NSError *error) {
                             Call *strongSelf = weakSelf;
@@ -238,7 +248,7 @@ _defaultPeerConnectionConstraints;
 }
 
 - (void)callOrAnswer: (RTCSessionDescription *)localsdp{
-    //NSLog(@"callOrAnswer:%@", localsdp.sdp);
+    NSLog(@"===callOrAnswer===:%@", localsdp.sdp);
     if(_isIncomingCall)
        [[CallManager instance] accept:_callId answersdp:localsdp.sdp];
     else {
