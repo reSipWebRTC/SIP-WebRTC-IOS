@@ -9,9 +9,9 @@
  */
 
 #import "ARDSettingsViewController.h"
-#import "reSipWebRTCSDK/CallConfig.h"
-#import "reSipWebRTCSDK/RTCVideoCodecInfo+HumanReadable.h"
-#import "AccountConfig.h"
+#import <reSipWebRTCSDK/CallConfig.h>
+#import <reSipWebRTCSDK/RTCVideoCodecInfo+HumanReadable.h>
+#import <reSipWebRTCSDK/AccountConfig.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

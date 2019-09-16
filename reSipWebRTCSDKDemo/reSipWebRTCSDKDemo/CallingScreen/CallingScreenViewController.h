@@ -7,7 +7,7 @@
 #import "ARDVideoCallView.h"
 #import <WebRTC/RTCLogging.h>
 #import <WebRTC/RTCVideoTrack.h>
-#import "Call.h"
+#import <reSipWebRTCSDK/Call.h>
 
 @class RTCVideoRendererAdapter;
 

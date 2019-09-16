@@ -1,7 +1,7 @@
 #import "ARDVideoCallView.h"
 #import <AVFoundation/AVFoundation.h>
 #import "DDPageControl.h"
-#import "CommonTypes.h"
+#import <reSipWebRTCSDK/CommonTypes.h>
 #import <WebRTC/RTCEAGLVideoView.h>
 #import <WebRTC/RTCMTLVideoView.h>
 #import "../Utils/CustomButton.h"

@@ -7,7 +7,7 @@
 #import <AVFoundation/AVAudioSession.h>
 #import <AVFoundation/AVAudioPlayer.h>
 
-#import "CommonTypes.h"
+#import <reSipWebRTCSDK/CommonTypes.h>
 
 #import "UserSoundsPlayerUtil.h"
 
