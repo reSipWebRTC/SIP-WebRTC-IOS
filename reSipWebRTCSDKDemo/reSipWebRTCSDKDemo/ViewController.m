@@ -10,6 +10,11 @@
 #import "reSipWebRTCSDK/SipEngineManager.h"
 #import "reSipWebRTCSDK/CallConfig.h"
 
+static NSString * const kARDDefaultSTUNServerUrl =
+@"stun:39.108.167.93:19302";
+static NSString * const kARDDefaultTURNServerUrl =
+@"turn:39.108.167.93:19302";
+
 @interface ViewController ()
 
 @end
@@ -188,9 +193,10 @@
 
 - (IBAction)CallButter:(id)sender {
     CallConfig *callConfig = [[CallConfig alloc]init];
+    [callConfig addiceServer:kARDDefaultSTUNServerUrl username:@"" credential:@""];
+    //[callConfig addiceServer:kARDDefaultTURNServerUrl username:@"websip" credential:@"websip"];
     Call* current_call = [[SipEngineManager instance] createCall:current_account.accId];
-    [current_call makeCall:@"1105" callConfig:callConfig];
-   // [self OnNewOutgoingCall:current_call caller:[current_call peerNumber] video_call:YES];
+    [current_call makeCall:@"1101" callConfig:callConfig];
 }
 
 - (IBAction)SettingsButton:(id)sender {

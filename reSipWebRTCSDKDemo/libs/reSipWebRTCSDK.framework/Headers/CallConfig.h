@@ -119,5 +119,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)storeUseManualAudioConfig:(BOOL)useManualAudioConfig;
 
+- (void)addiceServer:(NSString *)serverUrl
+            username:(nullable NSString *)username
+            credential:(nullable NSString *)credential;
+
+@property(nonatomic, strong) NSMutableArray *iceServers;
+
 @end
 NS_ASSUME_NONNULL_END
