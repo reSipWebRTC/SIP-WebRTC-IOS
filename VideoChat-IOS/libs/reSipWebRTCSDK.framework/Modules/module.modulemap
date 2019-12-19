@@ -1,0 +1,6 @@
+framework module reSipWebRTCSDK {
+  umbrella header "reSipWebRTCSDK.h"
+
+  export *
+  module * { export * }
+}
