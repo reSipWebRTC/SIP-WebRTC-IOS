@@ -1,5 +1,5 @@
 # reSipWebRTC-IOS 
-***此DEMO里面SDK做了版本控制，过段时间SDK失效，只用于测试使用，如果要商业化，请加QQ群***
+***此DEMO里面SDK做了版本控制，过段时间SDK失效，只用于测试使用，如果要商业化，请加QQ***
 
 基于reSIProcate和WebRTC的IOS sip客户端
 
@@ -14,4 +14,4 @@ https://github.com/reSipWebRTC/reSipWebRTC-Web
 https://github.com/reSipWebRTC/reSipWebRTC-Android
 
 
-QQ群：220927853
+QQ群：2766946534
