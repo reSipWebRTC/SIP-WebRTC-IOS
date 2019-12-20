@@ -391,6 +391,7 @@ bool is_initialize = false;
 -(void)makeCall:(NSString*)peerNumber {
     AppDelegate *appDelegate = ((AppDelegate *)[UIApplication sharedApplication].delegate);
     CallParams *callParams = appDelegate.callParams;
+    callParams.isVideoCall = TRUE;
     [[SipEngineManager instance] makeCall:[[appDelegate current_account] getAccId] calleeUri:peerNumber callParams:callParams];
 }
 
