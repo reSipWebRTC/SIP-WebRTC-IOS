@@ -9,14 +9,6 @@
 #import "global_config.h"
 #import <objc/NSObject.h>
 
-
-#define OEM_VERSION 0
-
-#define DEMO_VERSION 0
-#define EXPIRE_YEAR 2015
-#define EXPIRE_MONTH 5
-#define EXPIRE_DAY 25
-
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 

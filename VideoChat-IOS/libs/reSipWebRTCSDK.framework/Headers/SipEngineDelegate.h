@@ -39,10 +39,10 @@
 - (void)OnCallEnded:(Call*)call;
 
 /*接到视频通话邀请*/
-- (void)UpdatedByRemote:(Call *)call
+- (void)OnUpdatedByRemote:(Call *)call
               has_video:(BOOL)video;
 /*主动发起视频，返回结果*/
-- (void)UpdatedByLocal:(Call *)call
+- (void)OnUpdatedByLocal:(Call *)call
              has_video:(BOOL)video;
 
 - (void)OnCallFailed:(Call*)call
