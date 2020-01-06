@@ -242,7 +242,8 @@ static NSString * const kARDDefaultTURNServerUrl =
     
     if((turn_server && [turn_server length]) > 0 && (turn_username && [turn_password length] > 0))
     {
-       [_callParams addIceServer:stun_server username:turn_username credential:turn_password];
+        NSLog(@"============turn_server==========:%@:%@:%@", turn_server, turn_username, turn_password);
+       [_callParams addIceServer:turn_server username:turn_username credential:turn_password];
     }
     
     NSString *videoCodecInfo = (NSString*)[[NSUserDefaults standardUserDefaults] stringForKey:@"video_Codec_Info"];
