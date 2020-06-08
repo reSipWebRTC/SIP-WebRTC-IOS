@@ -1,0 +1,8 @@
+platform:ios,'9.0'
+target 'VideDemo' do
+  inhibit_all_warnings!
+  
+   pod 'Bugly'
+  
+end
+
