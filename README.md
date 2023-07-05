@@ -1,9 +1,9 @@
-# reSipWebRTC-IOS 
+# SIP-WebRTC-IOS
 ***此DEMO里面SDK做了版本控制，过段时间SDK失效，只用于测试使用，如果要商业化，请加QQ***
 
-https://github.com/reSipWebRTC/reSipWebRTC-Web
+https://github.com/reSipWebRTC/SIP-WebRTC-Web
 
-https://github.com/reSipWebRTC/reSipWebRTC-Android
+https://github.com/reSipWebRTC/SIP-WebRTC-Android
 
 
-微信：13510528673
+微信：2766946534
